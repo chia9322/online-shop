@@ -11,12 +11,12 @@
                      {% for item in order['order_items'] %}
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-2 order-column">
+                                <div class="col-lg order-column">
                                     <a class="order-item" href="/item/{{item.product_id}}">
                                         <img src="/static/images/{{item.product.img}}-0.jpg" class="order-img" alt="item-image">
                                     </a>
                                 </div>
-                                <div class="col-lg-8 order-column">
+                                <div class="col-lg order-column">
                                     <h5 class="order-item">{{item.product.name}}</h5>
                                     <h6 class="order-item">数量: {{item.quantity}}</h6>
                                     <h6 class="order-item">単価: {{item.product.price}}円</h6>

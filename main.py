@@ -170,7 +170,7 @@ def detail(item_id):
                 db.session.commit()
             return redirect(url_for('cart'))
         else:
-            flash("Please login before you shop.")
+            flash("Please login.")
             return redirect(url_for('login'))
     return render_template('detail.html', item=db.session.query(Product).get(item_id))
 

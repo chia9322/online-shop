@@ -161,10 +161,21 @@ body {
 
 /* Query */
 @media only screen and (max-device-width: 480px) {
+  h1, h2, h3, h4, h5, h6, p, a, i {
+    font-size: 140%;
+  }
   #cart {
       text-align: center;
   }
-  .item-images {
-  width: 12%;
+  .card-img {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+  }
+  .order-column {
+    text-align: left
+  }
+  .cart-column {
+    text-align: left
   }
 }
