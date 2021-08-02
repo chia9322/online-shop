@@ -24,7 +24,7 @@
       <!-- Nav Bar -->
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid nav-container">
-        <a class="navbar-brand" href="/">CodeBear</a>
+        <a class="navbar-brand" href="/"><h3>CodeBear</h3></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,23 +32,22 @@
           <ul class="navbar-nav ms-auto">
               {% if current_user.is_active %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('logout') }}"><h5>Log Out</h5></a>
+                    <a class="nav-link" href="{{ url_for('logout') }}"><h4>Log Out</h4></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('order') }}"><h5>Orders</h5></a>
+                    <a class="nav-link" href="{{ url_for('order') }}"><h4>Orders</h4></a>
                 </li>
                 <li class="nav-item">
                   <h3><a class="nav-link fas fa-shopping-cart" href="{{url_for('cart')}}"></a></h3>
                 </li>
               {% else %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url_for('login') }}"><h5>Login</h5></a>
+                  <a class="nav-link" href="{{ url_for('login') }}"><h4>Login</h4></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url_for('register') }}"><h5>Register</h5></a>
+                  <a class="nav-link" href="{{ url_for('register') }}"><h4>Register</h4></a>
                 </li>
               {% endif %}
-
           </ul>
         </div>
         </div>

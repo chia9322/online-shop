@@ -115,6 +115,9 @@ body {
 .card:hover .list-group-item{
   background-color: #d6cec8;
 }
+.order-date {
+  text-align: left;
+}
 
 /* Add Form */
 .add-form {
@@ -162,14 +165,13 @@ body {
 /* Query */
 @media only screen and (max-device-width: 480px) {
   h1, h2, h3, h4, h5, h6, p, a, i {
-    font-size: 140%;
+    font-size: 160%;
   }
   #cart {
       text-align: center;
   }
   .card-img {
   object-fit: cover;
-  height: 300px;
   width: 100%;
   }
   .order-column {
