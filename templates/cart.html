@@ -1,0 +1,52 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% include "header.html" %}
+
+<section id="cart" class="white-section">
+    <div class="container-fluid">
+    {% for item in cart_items %}
+        <div class="card" style="width: 100%;">
+            <div class="card-body">
+                <div class="row cart-row">
+                    <div class="col-lg-4 cart-column">
+                        <a href="/item/{{item.product_id}}"><img src="/static/images/{{item.product.img}}-0.jpg" class="cart-img" alt="item-image"></a>
+                    </div>
+                    <div class="col-lg-8 cart-column">
+                        <br>
+                        <h4>{{item.product.name}}</h4>
+                        <h5>{{item.product.price}}円</h5>
+                        <div class="row">
+                                <form action="{{url_for('cart')}}" method="POST">
+                                    <div class="col-4">
+                                      <select name="quantity" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                        {% for num in range(0,11) %}
+                                          {% if item.quantity == num %}
+                                            <option value="{{num}}" selected>{{num}}</option>
+                                          {% else %}
+                                            <option value="{{num}}">{{num}}</option>
+                                          {% endif %}
+                                        {% endfor %}
+                                      </select>
+                                    </div>
+                                    <div class="col-4">
+                                      <button type="submit" class="btn btn-secondary">Update</button>
+                                      <input type="hidden" name="cart_item_id" value={{item.id}}>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+        <div class="cart-summary">
+            <h4 class="check-out-form" >合計：{{total_price}}円</h4>
+            <form class="check-out-form" action="{{url_for('create_checkout_session')}}" method="POST">
+                <button type="submit" class="btn btn-secondary btn-lg">Check Out</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+
+{% include "footer.html" %}

@@ -1,0 +1,26 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% include "header.html" %}
+
+<section id="items" class="white-section">
+    <div class="container-fluid">
+      <div class="row">
+        {% for item in items : %}
+        <div class="col-12 col-lg-6 col-xl-4 item-column">
+          <a href="/item/{{item.id}}">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <img class="card-img" src=/static/images/{{item.img}}-0.jpg>
+              <h4 class="card-title">{{item.name}}</h4>
+              <h5 class="card-price">{{item.price}}円</h5>
+            </div>
+          </div>
+          </a>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+
+{% include "footer.html" %}

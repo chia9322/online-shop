@@ -1,0 +1,36 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% include "header.html" %}
+
+<section id="cart" class="white-section">
+    <div class="container-fluid">
+        {% for order in orders %}
+            <div class="card" style="width: 100%;">
+              <h3>{{order['order_db'].date}}</h3>
+
+                 <ul class="list-group list-group-flush">
+                     {% for item in order['order_items'] %}
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-2 order-column">
+                                    <a class="order-item" href="/item/{{item.product_id}}">
+                                        <img src="/static/images/{{item.product.img}}-0.jpg" class="order-img" alt="item-image">
+                                    </a>
+                                </div>
+                                <div class="col-lg-8 order-column">
+                                    <h5 class="order-item">{{item.product.name}}</h5>
+                                    <h6 class="order-item">数量: {{item.quantity}}</h6>
+                                    <h6 class="order-item">単価: {{item.product.price}}円</h6>
+                                </div>
+                            </div>
+                        </li>
+                     {% endfor %}
+                </ul>
+            <h5 class="total-price">合計: {{order['order_db'].total_price}}円</h5>
+
+
+            </div>
+        {% endfor %}
+
+    </div>
+</section>
+{% include "footer.html" %}

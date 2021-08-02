@@ -1,0 +1,170 @@
+body {
+  text-align: center;
+  font-family: "Montserrat";
+  color: #4f4239;
+}
+
+
+/* Containers */
+.container-fluid {
+  padding: 2% 5%;
+}
+
+/* Navigation Bar */
+.navbar-brand{
+  font-size: 150%
+}
+.nav-item {
+  padding: 0 20px;
+}
+
+/* Sections */
+.color-section {
+  background-color: #9b8677
+}
+.white-section {
+  background-color: #fff;
+  min-height: 80vh;
+}
+
+/* Card Section */
+#items {
+
+}
+.card {
+  padding: 10px;
+}
+#items a {
+  text-decoration: none;
+}
+.card-img {
+  object-fit: cover;
+  height: 300px;
+  width: 300px;
+}
+.card-title {
+  padding: 3%;
+  font-weight: 600;
+  color: #4f4239;
+}
+.card-price {
+  color: #4f4239;
+}
+.item-column {
+  padding: 20px;
+}
+.card:hover {
+  background-color: #d6cec8;
+}
+
+/* Detail Section */
+.item-image {
+  width: 100%
+}
+.item-images {
+  object-fit: cover;
+  width: 15%;
+  max-height: 200px;
+}
+.item-images:hover {
+  opacity: 0.5;
+}
+.images-row {
+  display: inline;
+}
+.description-column {
+  text-align: left;
+  padding: 20px 5%;
+}
+.description-line {
+  padding: 5% 0;
+}
+
+/* Cart Section */
+#cart {
+  padding: 0 10%;
+  text-align: left;
+}
+#cart .card {
+  margin: 20px 0;
+}
+.cart-img {
+  object-fit: cover;
+  max-width: 200px;
+  max-height: 200px;
+}
+.cart-img:hover {
+  opacity: 0.5;
+}
+.check-out-form {
+  text-align: right;
+}
+
+/* Order Section */
+.order-img {
+  object-fit: cover;
+  max-width: 100px;
+  max-height: 100px;
+}
+.order-img:hover {
+  opacity: 0.5;
+}
+.total-price {
+  text-align: right;
+}
+.card:hover .list-group-item{
+  background-color: #d6cec8;
+}
+
+/* Add Form */
+.add-form {
+  text-align: left;
+  font-size: 120%;
+}
+
+/* Form (Login & Register) */
+.form {
+  text-align: left;
+  font-size: 120%;
+  padding: 5% 5%;
+  max-width: 800px;
+}
+.form-message {
+  text-align: center;
+  color: red;
+}
+
+
+/* Footer */
+.footer {
+  text-align: center;
+}
+
+#footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+
+
+.social-icon {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #dcc7b9
+}
+
+
+/* Query */
+@media only screen and (max-device-width: 480px) {
+  #cart {
+      text-align: center;
+  }
+  .item-images {
+  width: 12%;
+  }
+}
