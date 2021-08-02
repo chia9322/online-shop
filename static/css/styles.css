@@ -171,8 +171,9 @@ body {
       text-align: center;
   }
   .card-img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
+  max-height: 500px;
   }
   .order-column {
     text-align: left
