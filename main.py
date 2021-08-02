@@ -12,7 +12,7 @@ import os
 
 from forms import TaskForm, RegisterForm, LoginForm
 
-DOMAIN = 'http://127.0.0.1:5000'
+DOMAIN = os.environ.get('DOMAIN')
 stripe.api_key = os.environ.get('SECRET_API_KEY')
 
 app = Flask(__name__)
